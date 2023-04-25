@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First lesson</title>
+</head>
+<body>
+    О теге "script"
+</body>
+
+<!-- Добавить JS-скрипт можно 2 путями: непосредственно писать его внутри тега
+Или же с помощью src импортировать файл js -->
+
+<!-- Добавляем js-скрипт к веб странице -->
+<script src="./One.js"></script>
+
+<!-- Таких тегов с JS добавлять можно сколь угодно много -->
+
+<!-- Если JS-скрипт очень простой, его не обязательно импортировать,
+в таком случае проще написать его внутри тега -->
+<script>
+    alert("Hello world!");
+</script>
+
+<!-- Однако совмещать нельзя: при обозначении файла в src
+весь содержимый код внутри тега script игнорируется -->
+<script src="/scripts/Two.js">
+    alert("Этот код выполнен не будет");
+</script>
+
+<!-- В такой ситуации достаточно сделать 2 тега script -->
+<script src="/scripts/Two.js"></script>
+<script>
+    alert("Этот код выполнен не будет");
+</script>
+
+</html>
